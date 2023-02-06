@@ -1,0 +1,29 @@
+{
+  "name": "Shortsless",
+  "description": "Hide YouTube shorts from your subscription feed",
+  "homepage_url": "https://github.com/alincoop/shortsless",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "YouTube shorts will be removed from feed following page load"
+  },
+  "content_scripts": [
+    {
+      "run_at" : "document_idle",
+      "js": ["pageload.js"],
+      "matches": [
+        "https://www.youtube.com/feed/subscriptions"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/feed/subscriptions"
+  ]
+}

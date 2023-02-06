@@ -18,6 +18,7 @@ When installed it will execute the following code; both following page load, and
 ## Notes
 - The script will not run against any pages except for: https://www.youtube.com/feed/subscriptions
 - New shorts will render into the DOM when scrolling down and loading additional thumbnails. Currently this requires another execution via extension icon to hide those elements.
+- Extension isn't triggered when navigating to the Feeds tab from YouTube homepage.
 
 ## Credit
 
